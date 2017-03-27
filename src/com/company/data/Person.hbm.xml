@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.company">
+    <class name="com.company.data.Person" table="people">
+        <id name="Id" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="age"/>
+        <property name="name" />
+        <many-to-one name="car" formula="SELECT cars.person_id FROM cars WHERE cars.person_id = id" class="com.company.data.Car"/>
+    </class>
+</hibernate-mapping>

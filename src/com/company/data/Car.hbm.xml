@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.company">
+    <class name="com.company.data.Car" table="cars">
+        <id name="Id" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="model"/>
+        <many-to-one name="owner" column="person_id" />
+    </class>
+</hibernate-mapping>
