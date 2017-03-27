@@ -12,6 +12,14 @@ public class Car
     String model;
     Person owner;
 
+    public Car()
+    {}
+
+    public Car(String model)
+    {
+        this.model = model;
+    }
+
     public Long getId()
     {
         return id;

@@ -7,11 +7,15 @@
 package com.company.data;
 
 
+import com.company.*;
+import org.hibernate.*;
+
 public class Person
 {
     Long id;
     String name;
     int age;
+    Car car;
 
     public Person()
     {
@@ -63,6 +67,12 @@ public class Person
         this.car = car;
     }
 
-    Car car;
-
+    public void print()
+    {
+        System.out.println("My name is " + name +", I am " + age + " years old.");
+        if (car != null)
+        {
+            System.out.print("I have a " + getCar().getModel() + ".");
+        }
+    }
 }

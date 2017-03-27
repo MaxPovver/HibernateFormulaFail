@@ -6,6 +6,6 @@
         </id>
         <property name="age"/>
         <property name="name" />
-        <many-to-one name="car" formula="SELECT cars.person_id FROM cars WHERE cars.person_id = id" class="com.company.data.Car"/>
+        <many-to-one name="car" formula="(SELECT cars.person_id FROM cars WHERE cars.person_id = id)" class="com.company.data.Car"/>
     </class>
 </hibernate-mapping>
