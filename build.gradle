@@ -15,17 +15,12 @@ sourceSets {
             srcDir 'src'
             srcDir 'resources'
 
-            // client resources
-            exclude '**/*.java'
-
-            // server resources
             include "*.xml",
                     "*.properties",
                     "*.policy",
                     "*.ini",
                     "webapp/**",
-                    "com/fundcount/fcoffice/**/*.xml",
-                    "com/fundcount/fcoffice/server/resources/**"
+                    "com/company/data/*.xml"
         }
     }
     test {
@@ -41,9 +36,9 @@ sourceSets {
 
 dependencies {
    compile 'mysql:mysql-connector-java:5.1.16'
-   compile 'oracle:ojdbc6:11.2.0.3'
    compile 'org.hibernate:hibernate-core:3.5.6-Final'
-   compile'org.hibernate:hibernate-entitymanager:3.5.6-Final'
+   compile 'org.hibernate:hibernate-entitymanager:3.5.6-Final'
+    compile 'org.slf4j:slf4j-api:1.7.10'
 }
 
 task wrapper(type: Wrapper) {
